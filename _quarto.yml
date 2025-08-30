@@ -5,7 +5,7 @@ project:
 website:
   page-navigation: true
   title: "Kevin Liu"
-  site-url: https://liukang.github.io
+  site-url: https://smallastream148.github.io/liukang.github.io/
   favicon: images/site-logo.png
 
   
@@ -16,13 +16,14 @@ website:
     search: true
     right: 
       - text: "Home"
-        href: index.qmd
+        href: blog.qmd
+        #href: index.qmd
       - text: "Publications"
         href: publications.qmd
       - text: "Books"
         href: books.qmd
-      - text: "Blogs"
-        href: blog.qmd
+#      - text: "Blogs"
+#        href: blog.qmd
       - text: "Codes"
         href: codes.qmd
       - text: "中文"
