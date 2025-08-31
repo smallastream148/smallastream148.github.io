@@ -1,6 +1,6 @@
 ---
 title: "Kang Liu"
-image: images/lianyujun_2025.png
+image: images/liukang_2025.jpg
 about:
   id: hero-heading
   template: trestles
@@ -10,17 +10,12 @@ about:
     - icon: mailbox
       text: lk@163.com
       href: mailto:lk@163.com
-
-
 ---
 
 ::: {#hero-heading}
-
-
-
-
 ## Background
+I am a professional in the field of maritime education. Currently, I work at Zhejiang Institute of communications, and I have previously served as a seafarer on oil tankers. 
+My primary research area focuses on factors influencing ship safety, particularly in the domains of maritime distress rescue and human-related safety factors. I have led and contributed to multiple national and provincial research projects and have published numerous academic papers in relevant fields.
 
-
-
+In addition, I have a strong interest in swimming and running, and I actively participate in amateur marathon events.
 :::
