@@ -1,24 +1,25 @@
 ---
 title: "航海仪器"
 author: "Kevin Liu"
-description: |
-    null
-date: "2024-11-05"
+date: "2025-8-31"
+toc: true
+toc-depth: 3
+toc-location: left
 categories: [navi tech]
 title-block-banner: false
 format: 
   html:
-    toc: true
-    toc-depth: 2
-    code-fold: false
-    code-tools: false
+    theme: cosmo
+    page-layout: full
+    margin-left: 20px
+    margin-right: 20px
 ---
 
 ## 电子海图
 
 ### 1. 电子海图基础
 
-![](piciture/JRC_ECDIS.png){fig-align="center"}
+![](piciture/JRC_ECDIS.png){fig-align="center" width="300"}
 
 电子海图（EC-Electronic chart）：用数字形式描述海域地理信息和航海信息为主的海图；其内容以海域要素为主，详细表示航行障碍物、助航标志、港口设施、潮流、海流等要素，陆地着重表示沿海的航行目标和主要地貌、地物。电子海图可在屏幕上显示，所以也称为“屏幕海图”
 
@@ -28,7 +29,7 @@ format:
 
 #### 1.1电子海图标准
 
-![](images/paste-4.png)
+![](images/paste-4.png){fig-align="center" width="367" height="255"}
 
 标准化的光栅电子海图——光栅扫描航海图（Raster Navigational Chart，RNC）：符合IHO《光栅航海图产品规范》（S-61）的光栅电子海图，是由国家海道测量局或其授权出版的纸质海图通过数字复制而成的图像文件，可以是单一海图也可以是系列海图。
 
@@ -38,7 +39,7 @@ format:
 
 国际海事组织定义的标准电子海图系统即电子海图显示与信息系统（ Electronic Chart Display and Information System ，ECDIS）。 ECDIS是一种航行信息系统，如果这个系统具有适当的备用配置，便能被接受为符合1974年SOLAS公约中第5章第19和27条关于改正至最新的海图的配备要求。该系统可有选择地显示系统电子航海图中的信息以及从导航传感器获得的位置信息以帮助航海人员进行航线设计和航行监控，并且能够按要求显示其它与航海相关的信息。
 
-![](images/paste-8.png)
+![](images/paste-8.png){fig-align="center" width="394"}
 
 -   ECDIS实质上是一个具有高性能的内、外部接口符合S-52标准要求的船用计算机系统。
 
@@ -52,15 +53,11 @@ format:
 
 #### 1.3 数据模型和结构
 
-![](images/paste-3.png)
+![](images/paste-3.png){fig-align="center" width="419" height="259"}
 
 #### 1.4 显示和识别
 
-![](images/paste-5.png)
-
-![](images/paste-6.png)
-
-![](images/paste-9.png)
+![](images/paste-5.png){width="167"} ![](images/paste-6.png){width="200" height="150"} ![](images/paste-9.png){fig-align="center" width="246"}
 
 #### 1.5 数据更新
 
@@ -72,9 +69,7 @@ format:
 
 #### 2.1 海图显示
 
-![](images/paste-12.png)
-
-![](images/paste-13.png)
+![](images/paste-12.png){width="269"} ![](images/paste-13.png){fig-align="center" width="260"}
 
 -   载入方式：自动载入、手动载入
 
@@ -98,15 +93,21 @@ format:
 
 #### 2.3 与导航设备联用
 
-本船显示 ![](images/paste-15.png)
+本船显示
 
-雷达 ![](images/paste-14.png)
+![](images/paste-15.png){width="300"}
 
-AIS ![](images/paste-16.png)
+雷达
+
+![](images/paste-14.png){width="300"}
+
+AIS
+
+![](images/paste-16.png){width="300"}
 
 测深仪、风速仪、Navtex、自动舵、VDR
 
-![](images/paste-17.png)
+![](images/paste-17.png){width="300"}
 
 #### 2.4 参数设定
 
