@@ -1,14 +1,25 @@
 ---
 title: "Blogs"
-editor: 
-  markdown: 
-    wrap: 72
+description:  |
+  这是一个私人blog
+listing:
+  - id: blog
+    fields: [title, date]
+    contents: 
+      - "blog_*/index.qmd"
+    type: table
+    grid-item-border: false
+    sort-ui: false
+    sort: "date desc"
+    filter-ui: false
+    categories: true
+    date-format: short
+
 ---
 
  
 
-## New 10
+### Blog
 
-## Hot 10
-
--
+::: {#blog}
+:::
