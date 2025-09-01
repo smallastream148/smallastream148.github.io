@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.33">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Kevin Liu">
+<meta name="dcterms.date" content="2025-08-31">
+
+<title>电子海图 – Hello, Kevin Liu</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/site-logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4931ad3a4f610300299060d87ad9de1f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-f4e1c76dc499e578f7dd059481126e18.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="floating nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Hello, Kevin Liu</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog/blog.html"> 
+<span class="menu-text">Blogs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../codes.html"> 
+<span class="menu-text">Codes</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#电子海图" id="toc-电子海图" class="nav-link active" data-scroll-target="#电子海图">电子海图</a>
+  <ul class="collapse">
+  <li><a href="#电子海图基础" id="toc-电子海图基础" class="nav-link" data-scroll-target="#电子海图基础">1. 电子海图基础</a></li>
+  <li><a href="#电子海图的使用" id="toc-电子海图的使用" class="nav-link" data-scroll-target="#电子海图的使用">2. 电子海图的使用</a></li>
+  <li><a href="#电子海图的注意事项" id="toc-电子海图的注意事项" class="nav-link" data-scroll-target="#电子海图的注意事项">3. 电子海图的注意事项</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://smallastream148.github.io/liukang.github.io/edit/main/blog/blog_20250831_ECDIS/index.qmd" class="toc-action"><i class="bi bi-git"></i>Edit this page</a></li><li><a href="https://smallastream148.github.io/liukang.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content column-page-right" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">电子海图</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">navi tech</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta column-page-right">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Kevin Liu </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 31, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="电子海图" class="level2">
+<h2 class="anchored" data-anchor-id="电子海图">电子海图</h2>
+<section id="电子海图基础" class="level3">
+<h3 class="anchored" data-anchor-id="电子海图基础">1. 电子海图基础</h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="piciture/JRC_ECDIS.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="300"></p>
+</figure>
+</div>
+<p>电子海图（EC-Electronic chart）：用数字形式描述海域地理信息和航海信息为主的海图；其内容以海域要素为主，详细表示航行障碍物、助航标志、港口设施、潮流、海流等要素，陆地着重表示沿海的航行目标和主要地貌、地物。电子海图可在屏幕上显示，所以也称为“屏幕海图”</p>
+<ul>
+<li><p>光栅电子海图（Raster Charts）：以栅格形式表示的数字海图，是通过对纸质海图的光学扫描形成的数据信息文件，是以像素点的排列反映出海图中的要素。光栅电子海（Raster Charts）可看作是纸质海图的复制品。使用者不能对光栅电子海图进行查询式操作（如查询某一海图要素特征，或隐去某类海图要素等）。因此，光栅电子海图常被称为“非智能化电子海图”。</p></li>
+<li><p>矢量电子海图（Vector Charts）：将数字化的海图信息分类存储的数据库，海域中的每个要素是以点、线、面等几何图元的形式存储在电子海图数据文件中。矢量电子海图（Vector Charts）：使用者可以选择性地查询、显示和使用数据，和其他船舶系统相结合提供诸如警戒区、危险区的自动报警等功能。因此，矢量电子海图常被称为“智能化电子海图”</p></li>
+</ul>
+<section id="电子海图标准" class="level4">
+<h4 class="anchored" data-anchor-id="电子海图标准">1.1电子海图标准</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-4.png" class="quarto-figure quarto-figure-center figure-img" width="367" height="255"></p>
+</figure>
+</div>
+<p>标准化的光栅电子海图——光栅扫描航海图（Raster Navigational Chart，RNC）：符合IHO《光栅航海图产品规范》（S-61）的光栅电子海图，是由国家海道测量局或其授权出版的纸质海图通过数字复制而成的图像文件，可以是单一海图也可以是系列海图。</p>
+<p>标准化矢量电子海图——电子航海图（ Electronic Navigational Chart，ENC）：是内容、结构和格式均标准化的数据库，该数据库由政府或政府授权的海道测量机构或其他相关政府机构发布并符合IHO标准，供ECDIS使用。ENC包含安全航行所需的所有海图信息，并可包含纸质海图上没有但可视为安全航行所需的补充信息（例如航路指南）。</p>
+</section>
+<section id="ecdis" class="level4">
+<h4 class="anchored" data-anchor-id="ecdis">1.2 ECDIS</h4>
+<p>国际海事组织定义的标准电子海图系统即电子海图显示与信息系统（ Electronic Chart Display and Information System ，ECDIS）。 ECDIS是一种航行信息系统，如果这个系统具有适当的备用配置，便能被接受为符合1974年SOLAS公约中第5章第19和27条关于改正至最新的海图的配备要求。该系统可有选择地显示系统电子航海图中的信息以及从导航传感器获得的位置信息以帮助航海人员进行航线设计和航行监控，并且能够按要求显示其它与航海相关的信息。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-8.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="394"></p>
+</figure>
+</div>
+<ul>
+<li><p>ECDIS实质上是一个具有高性能的内、外部接口符合S-52标准要求的船用计算机系统。</p></li>
+<li><p>中央处理器、内存和显存容量应保证显示一幅电子海图所需时间不超过5秒。</p></li>
+<li><p>海图显示区的最小有效尺寸应为270mm×270mm。</p></li>
+<li><p>海图显示、海图作业、海图改正、定位及导航、雷达信息处理、航路监视、航海信息咨询、航行记录</p></li>
+<li><p>通过类型认证的ECDIS使用改正至最新的官方ENC（官方海道测量部门提供的符合IHO S-57标准，具体内容、显示方式、颜色和符号的使用等要符合IHO S-52规范）并配备适当的备用配置，可以取代纸质海图。</p></li>
+</ul>
+</section>
+<section id="数据模型和结构" class="level4">
+<h4 class="anchored" data-anchor-id="数据模型和结构">1.3 数据模型和结构</h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/paste-3.png" class="quarto-figure quarto-figure-center figure-img" width="419" height="259"></p>
+</figure>
+</div>
+</section>
+<section id="显示和识别" class="level4">
+<h4 class="anchored" data-anchor-id="显示和识别">1.4 显示和识别</h4>
+<p><img src="images/paste-5.png" class="img-fluid" width="167"> <img src="images/paste-6.png" width="200" height="150"> <img src="images/paste-9.png" class="img-fluid quarto-figure quarto-figure-center" width="246"></p>
+</section>
+<section id="数据更新" class="level4">
+<h4 class="anchored" data-anchor-id="数据更新">1.5 数据更新</h4>
+<ul>
+<li>全自动更新：不必任何人员介入即可使更新信息从分发人处直接传入ECDIS，例如通过广播或者INTERNET完成传送。</li>
+<li>半自动更新：需要人员介入才能在传输介质和ECDIS之间建立通道（例如，插入更新盘，或者建立电话通讯线路）的更新方法。</li>
+<li>手动改正：由操作人员手工将信息键入ECDIS</li>
+</ul>
+</section>
+</section>
+<section id="电子海图的使用" class="level3">
+<h3 class="anchored" data-anchor-id="电子海图的使用">2. 电子海图的使用</h3>
+<section id="海图显示" class="level4">
+<h4 class="anchored" data-anchor-id="海图显示">2.1 海图显示</h4>
+<p><img src="images/paste-12.png" class="img-fluid" width="269"> <img src="images/paste-13.png" class="img-fluid quarto-figure quarto-figure-center" width="260"></p>
+<ul>
+<li><p>载入方式：自动载入、手动载入</p></li>
+<li><p>显示背景：白天、黄昏、夜晚</p></li>
+<li><p>运动模式：真运动、相对运动</p></li>
+<li><p>显示方向：North up, Head up, Course up</p></li>
+<li><p>比例尺变换</p></li>
+<li><p>海区变换</p></li>
+<li><p>内容选择</p></li>
+</ul>
+</section>
+<section id="航海测量" class="level4">
+<h4 class="anchored" data-anchor-id="航海测量">2.2 航海测量</h4>
+<p>基本测量：位置、方位、距离</p>
+<p>航迹推算、定位</p>
+</section>
+<section id="与导航设备联用" class="level4">
+<h4 class="anchored" data-anchor-id="与导航设备联用">2.3 与导航设备联用</h4>
+<p>本船显示</p>
+<p><img src="images/paste-15.png" class="img-fluid" width="300"></p>
+<p>雷达</p>
+<p><img src="images/paste-14.png" class="img-fluid" width="300"></p>
+<p>AIS</p>
+<p><img src="images/paste-16.png" class="img-fluid" width="300"></p>
+<p>测深仪、风速仪、Navtex、自动舵、VDR</p>
+<p><img src="images/paste-17.png" class="img-fluid" width="300"></p>
+</section>
+<section id="参数设定" class="level4">
+<h4 class="anchored" data-anchor-id="参数设定">2.4 参数设定</h4>
+</section>
+<section id="航线设计" class="level4">
+<h4 class="anchored" data-anchor-id="航线设计">2.5 航线设计</h4>
+</section>
+<section id="航行监控" class="level4">
+<h4 class="anchored" data-anchor-id="航行监控">航行监控</h4>
+<ul>
+<li><p>ECDIS应有能力保存前12小时的记录以及航次航迹的记录。</p></li>
+<li><p>船员可以查询已有的航行记录，但不能不能伪造、修改记录。</p></li>
+</ul>
+</section>
+<section id="航行记录" class="level4">
+<h4 class="anchored" data-anchor-id="航行记录">航行记录</h4>
+</section>
+</section>
+<section id="电子海图的注意事项" class="level3">
+<h3 class="anchored" data-anchor-id="电子海图的注意事项">3. 电子海图的注意事项</h3>
+<section id="误差" class="level4">
+<h4 class="anchored" data-anchor-id="误差">3.1 误差</h4>
+<p><span class="math display">\[数据误差\begin{cases}
+海图数据误差 \\
+坐标系误差 \\
+数据不一致问题
+\end{cases}\]</span></p>
+<p><span class="math display">\[设备误差\begin{cases}
+ECDIS设备误差 \\
+外部传感器误差 \\
+数据延时
+\end{cases}\]</span></p>
+<p><span class="math display">\[系统使用不当\begin{cases}
+1.忽视海图超比例尺显示 \\
+2.忽视显示控制 \\
+3.参数设置不当 \\
+4.缺乏分析接受显示船位 \\
+5.忽视假显示 \\
+6.不清楚不同的矢量稳定模式 \\
+7.航线检验结果的盲目信赖 \\
+8.操作错误
+\end{cases}\]</span></p>
+</section>
+<section id="正确配置系统" class="level4">
+<h4 class="anchored" data-anchor-id="正确配置系统">3.2 正确配置系统</h4>
+<ul>
+<li><p>应使用权威机构发行的电子航海图。注意及时改正</p></li>
+<li><p>正确设置ECDIS系统</p></li>
+<li><p>正确解读相关信息与提示</p></li>
+<li><p>软件及时更新，硬件保持维护</p></li>
+<li><p>传感器正确连接</p></li>
+<li><p>及时进行性能检测和测试</p></li>
+<li><p>应急电源：从一电源转换到另一电源或不超过45s的断电时应不需要手动重新启动设备。</p></li>
+<li><p>配置备用设备</p></li>
+</ul>
+<p>具有一部使用独立电源、与具备连续定位能力传感器连接的ECDIS。同时，满足整个航次所需的改正到最新的最新版纸质海图。</p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/liukang\.github\.io\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>© Copyright 2024, Chi Zhang</p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://smallastream148.github.io/liukang.github.io/edit/main/blog/blog_20250831_ECDIS/index.qmd" class="toc-action"><i class="bi bi-git"></i>Edit this page</a></li><li><a href="https://smallastream148.github.io/liukang.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
