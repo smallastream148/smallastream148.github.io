@@ -1,0 +1,60 @@
+---
+title: "航海气象-天气图"
+author: "Kevin Liu"
+date: "2025-09-04"
+categories: [meteorology]
+title-block-banner: false
+format: 
+  html:
+    toc: true
+    toc-depth: 3
+    toc-location: left
+    page-layout: full
+    margin-left: 20px
+    margin-right: 20px
+---
+
+## 1. 天气图基础
+
+天气图(Weather Chart)：填有各地区同一时刻气象要素观测记录，能反映某一地区、某一时刻天气状况或天气形势的特种地图。
+
+天气图的种类：地面天气图、高空天气图和各种辅助图表。 天气图采用的时间：地面图：00，06，12，18世界时；高空图：00，12世界时。(观测时）
+
+地面天气图：
+
+![](images/paste-1.png)
+
+| 符号       | 示意           |
+|------------|----------------|
+| TT         | 气温           |
+| WW         | 现在天气现象； |
+| VV         | 能见度         |
+| TdTd       | 露点温度       |
+| CH、CM、CL | 高、中、低云状 |
+| N、Nh      | 总云量、低云量 |
+| h          | 低云高         |
+| dd、ff     | 风向、风速     |
+| PPP        | 海平面气压     |
+| PP         | 3h变压         |
+| a          | 3h气压倾向     |
+| W          | 过去天气现象   |
+| RR         | 降水量         |
+
+高空天气图：
+
+![](images/paste-2.png)
+
+| 符号       | 示意           |
+|------------|----------------|
+|TT|气温|
+|HHH|等压面位势高度|
+|T-Td|气温露点差|
+|dd|风向|
+|ff|风速|
+
+
+## 2. 气象信息获取
+
+## 3. 天气图识别和解读
+
+## 4. 海况预报

@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="这是一个私人blog">
+<meta name="author" content="Kevin Liu">
+<meta name="dcterms.date" content="2025-09-04">
 
-<title>Blogs – Hello, Kevin Liu</title>
+<title>航海气象-天气图 – Hello, Kevin Liu</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,26 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../">
-<link href="../images/site-logo.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/popper.min.js"></script>
-<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-4931ad3a4f610300299060d87ad9de1f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-b0f39580e19c877dc95f2cf519ba6bfa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/site-logo.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-4931ad3a4f610300299060d87ad9de1f.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-f4e1c76dc499e578f7dd059481126e18.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -71,76 +70,18 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-blog .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-blog'] = new List('listing-blog', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
-<body class="nav-fixed quarto-light">
+<body class="floating nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Hello, Kevin Liu</span>
     </a>
   </div>
@@ -151,15 +92,15 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../blog/blog.html" aria-current="page"> 
+    <a class="nav-link" href="../../blog/blog.html"> 
 <span class="menu-text">Blogs</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../codes.html"> 
+    <a class="nav-link" href="../../codes.html"> 
 <span class="menu-text">Codes</span></a>
   </li>  
 </ul>
@@ -170,36 +111,52 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-<!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#blog" id="toc-blog" class="nav-link active" data-scroll-target="#blog">Blog</a></li>
+  <li><a href="#天气图基础" id="toc-天气图基础" class="nav-link active" data-scroll-target="#天气图基础">1. 天气图基础</a></li>
+  <li><a href="#气象信息获取" id="toc-气象信息获取" class="nav-link" data-scroll-target="#气象信息获取">2. 气象信息获取</a></li>
+  <li><a href="#天气图识别和解读" id="toc-天气图识别和解读" class="nav-link" data-scroll-target="#天气图识别和解读">3. 天气图识别和解读</a></li>
+  <li><a href="#海况预报" id="toc-海况预报" class="nav-link" data-scroll-target="#海况预报">4. 海况预报</a></li>
   </ul>
-<div class="toc-actions"><ul><li><a href="https://smallastream148.github.io/liukang.github.io/edit/main/blog/blog.qmd" class="toc-action"><i class="bi bi-git"></i>Edit this page</a></li><li><a href="https://smallastream148.github.io/liukang.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="bWV0ZW9yb2xvZ3k=">meteorology <span class="quarto-category-count">(4)</span></div><div class="category" data-category="bmF2aSUyMHRlY2g=">navi tech <span class="quarto-category-count">(2)</span></div></div></div>
+<div class="toc-actions"><ul><li><a href="https://smallastream148.github.io/liukang.github.io/edit/main/blog/blog_20250904_qixiang4/index.qmd" class="toc-action"><i class="bi bi-git"></i>Edit this page</a></li><li><a href="https://smallastream148.github.io/liukang.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-right" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Blogs</h1>
-</div>
-
-<div>
-  <div class="description">
-    <p>这是一个私人blog</p>
+<h1 class="title">航海气象-天气图</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">meteorology</div>
   </div>
-</div>
+  </div>
 
 
-<div class="quarto-title-meta">
 
+<div class="quarto-title-meta column-page-right">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Kevin Liu </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 4, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -209,91 +166,115 @@ window.Quarto = {
 </header>
 
 
-<p> </p>
-<section id="blog" class="level3">
-<h3 class="anchored" data-anchor-id="blog">Blog</h3>
-<div id="listing-blog" class="quarto-listing quarto-listing-container-table">
-<table class="quarto-listing-table table">
+<section id="天气图基础" class="level2">
+<h2 class="anchored" data-anchor-id="天气图基础">1. 天气图基础</h2>
+<p>天气图(Weather Chart)：填有各地区同一时刻气象要素观测记录，能反映某一地区、某一时刻天气状况或天气形势的特种地图。</p>
+<p>天气图的种类：地面天气图、高空天气图和各种辅助图表。 天气图采用的时间：地面图：00，06，12，18世界时；高空图：00，12世界时。(观测时）</p>
+<p>地面天气图：</p>
+<p><img src="images/paste-1.png" class="img-fluid"></p>
+<table class="caption-top table">
 <thead>
-<tr>
-
-<th>
-Title
-</th>
-
-<th>
-Date
-</th>
-
+<tr class="header">
+<th>符号</th>
+<th>示意</th>
 </tr>
 </thead>
-<tbody class="list">
-
-<tr data-index="0" data-categories="bWV0ZW9yb2xvZ3k=" data-listing-date-sort="1756915200000" data-listing-file-modified-sort="1756989400289" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="252" data-listing-title-sort="航海气象-天气图" data-listing-filename-sort="index.qmd">
-<td>
-<a href="../blog/blog_20250904_qixiang4/index.html" class="title listing-title">航海气象-天气图</a>
-</td>
-<td>
-<span class="listing-date">9/4/25</span>
-</td>
-
+<tbody>
+<tr class="odd">
+<td>TT</td>
+<td>气温</td>
 </tr>
-
-<tr data-index="1" data-categories="bWV0ZW9yb2xvZ3k=" data-listing-date-sort="1756828800000" data-listing-file-modified-sort="1756976073763" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="311" data-listing-title-sort="航海气象-天气系统" data-listing-filename-sort="index.qmd">
-<td>
-<a href="../blog/blog_20250903_qixiang3/index.html" class="title listing-title">航海气象-天气系统</a>
-</td>
-<td>
-<span class="listing-date">9/3/25</span>
-</td>
-
+<tr class="even">
+<td>WW</td>
+<td>现在天气现象；</td>
 </tr>
-
-<tr data-index="2" data-categories="bWV0ZW9yb2xvZ3k=" data-listing-date-sort="1756742400000" data-listing-file-modified-sort="1756823106376" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="245" data-listing-title-sort="航海气象-气象" data-listing-filename-sort="index.qmd">
-<td>
-<a href="../blog/blog_20250902_qixiang1/index.html" class="title listing-title">航海气象-气象</a>
-</td>
-<td>
-<span class="listing-date">9/2/25</span>
-</td>
-
+<tr class="odd">
+<td>VV</td>
+<td>能见度</td>
 </tr>
-
-<tr data-index="3" data-categories="bWV0ZW9yb2xvZ3k=" data-listing-date-sort="1756742400000" data-listing-file-modified-sort="1756823081654" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="54" data-listing-title-sort="航海气象-水文" data-listing-filename-sort="index.qmd">
-<td>
-<a href="../blog/blog_20250902_qixiang2/index.html" class="title listing-title">航海气象-水文</a>
-</td>
-<td>
-<span class="listing-date">9/2/25</span>
-</td>
-
+<tr class="even">
+<td>TdTd</td>
+<td>露点温度</td>
 </tr>
-
-<tr data-index="4" data-categories="bmF2aSUyMHRlY2g=" data-listing-date-sort="1756569600000" data-listing-file-modified-sort="1756689661718" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="162" data-listing-title-sort="电子海图" data-listing-filename-sort="index.qmd">
-<td>
-<a href="../blog/blog_20250831_ECDIS/index.html" class="title listing-title">电子海图</a>
-</td>
-<td>
-<span class="listing-date">8/31/25</span>
-</td>
-
+<tr class="odd">
+<td>CH、CM、CL</td>
+<td>高、中、低云状</td>
 </tr>
-
-<tr data-index="5" data-categories="bmF2aSUyMHRlY2g=" data-listing-date-sort="1756569600000" data-listing-file-modified-sort="1756708891454" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="70" data-listing-title-sort="航海仪器" data-listing-filename-sort="index.qmd">
-<td>
-<a href="../blog/blog_20250901_naviequipment/index.html" class="title listing-title">航海仪器</a>
-</td>
-<td>
-<span class="listing-date">8/31/25</span>
-</td>
-
+<tr class="even">
+<td>N、Nh</td>
+<td>总云量、低云量</td>
 </tr>
-
+<tr class="odd">
+<td>h</td>
+<td>低云高</td>
+</tr>
+<tr class="even">
+<td>dd、ff</td>
+<td>风向、风速</td>
+</tr>
+<tr class="odd">
+<td>PPP</td>
+<td>海平面气压</td>
+</tr>
+<tr class="even">
+<td>PP</td>
+<td>3h变压</td>
+</tr>
+<tr class="odd">
+<td>a</td>
+<td>3h气压倾向</td>
+</tr>
+<tr class="even">
+<td>W</td>
+<td>过去天气现象</td>
+</tr>
+<tr class="odd">
+<td>RR</td>
+<td>降水量</td>
+</tr>
 </tbody>
 </table>
-<div class="listing-no-matching d-none">No matching items</div>
-</div>
-
+<p>高空天气图：</p>
+<p><img src="images/paste-2.png" class="img-fluid"></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>符号</th>
+<th>示意</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TT</td>
+<td>气温</td>
+</tr>
+<tr class="even">
+<td>HHH</td>
+<td>等压面位势高度</td>
+</tr>
+<tr class="odd">
+<td>T-Td</td>
+<td>气温露点差</td>
+</tr>
+<tr class="even">
+<td>dd</td>
+<td>风向</td>
+</tr>
+<tr class="odd">
+<td>ff</td>
+<td>风速</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="气象信息获取" class="level2">
+<h2 class="anchored" data-anchor-id="气象信息获取">2. 气象信息获取</h2>
+</section>
+<section id="天气图识别和解读" class="level2">
+<h2 class="anchored" data-anchor-id="天气图识别和解读">3. 天气图识别和解读</h2>
+</section>
+<section id="海况预报" class="level2">
+<h2 class="anchored" data-anchor-id="海况预报">4. 海况预报</h2>
 
 
 </section>
@@ -706,7 +687,7 @@ Date
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://smallastream148.github.io/liukang.github.io/edit/main/blog/blog.qmd" class="toc-action"><i class="bi bi-git"></i>Edit this page</a></li><li><a href="https://smallastream148.github.io/liukang.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://smallastream148.github.io/liukang.github.io/edit/main/blog/blog_20250904_qixiang4/index.qmd" class="toc-action"><i class="bi bi-git"></i>Edit this page</a></li><li><a href="https://smallastream148.github.io/liukang.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
       &nbsp;
     </div>
